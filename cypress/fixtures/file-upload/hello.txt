@@ -1,0 +1,2 @@
+Hello from Cypress fixture.
+This file is uploaded by the file-upload spec.
