@@ -5,8 +5,8 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: "https://testpages.eviltester.com",
-    viewportWidth: 1280,
-    viewportHeight: 720,
+    viewportWidth: 1920,
+    viewportHeight: 1080,
     video: false,
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
