@@ -1,6 +1,12 @@
 # TestowanieAplikacji
 
-End-to-end Cypress + TypeScript tests for [testpages.eviltester.com](https://testpages.eviltester.com).
+End-to-end Cypress + TypeScript tests for [testpages.eviltester.com](https://testpages.eviltester.com) — Alan Richardson's practice app for HTML form behaviour, browser dialogs, storage APIs, drag-and-drop, and small SPA patterns.
+
+Eight specs under `cypress/e2e/` cover three tiers:
+
+- **Foundations** — basic syntax demo and HTML form inputs.
+- **Browser primitives** — JavaScript alerts, file upload, local storage, drag-and-drop.
+- **Apps** — simulated login and a basiccart shop.
 
 ## Run
 
