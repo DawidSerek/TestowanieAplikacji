@@ -3,4 +3,5 @@ cypress/screenshots/
 cypress/downloads/
 cypress/videos/
 .opencode/
+.vscode/
 .DS_Store
