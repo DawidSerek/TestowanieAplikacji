@@ -1,0 +1,17 @@
+export const BASIC_INPUTS_SELECTORS = {
+  formWrapper: "#form-elements-wrapper",
+  form: "#ajax-submitted-form",
+  formHeading: "h2",
+  requiredToggle: "#toggle-required",
+  buttonInput: "#button-input",
+  checkboxInput: "#checkbox-input",
+  radioGroup: "#radio-input",
+  radio1: "#radio-input-1",
+  radio2: "#radio-input-2",
+  hiddenInput: "#hidden-input",
+  validateButton: "#validate-inputs",
+  validateSendButton: "#validate-send-inputs",
+  sendButton: "#send-inputs",
+  statusMessage: "#statusmessage",
+  formResults: "#form-results",
+} as const;
