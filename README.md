@@ -130,6 +130,12 @@ This project was built with significant AI assistance. Two complementary tools w
 - **LM Studio + Qwen2.5-Coder-3B** — self-hosted local model used for inline autocompletion while writing code. Kept the developer in the loop for every keystroke.
 - **Opencode + MiniMax-M3** — agentic harness used for end-to-end work: fetching pages, hand-extracting selectors, writing spec + selector files, iterating until green, and committing. The user approved each scenario's plan before files were written.
 
-In addition, [`cypress-mcp`](https://github.com/yashpreetbathla/cypress-mcp) was the primary tool for running tests and inspecting results — every spec in this repo was first exercised via `cypress_run_spec`, then iterated with `cypress_get_failure_context` and `cypress_get_screenshot` until green.
+In addition, three **Cypress skills** wired into Opencode guided spec authoring, explanation, and Cypress-API grounding throughout the project:
+
+- **`cypress-author`** — applied whenever a new spec, selector, or fix was written (scenarios S3–S8 and the spec reformat pass that aligned `01-html-forms.cy.ts` with `00-basic-syntax.cy.ts`).
+- **`cypress-explain`** — applied when reviewing or critiquing existing tests without changes (used during selector-organization and SOLID discussions).
+- **`cypress-docs`** — applied whenever a Cypress API or behaviour claim needed grounding in official documentation, especially around `cy.on('window:alert')`, `selectFile`, `cy.window().then(...)`, and the dual-command `prevSubject: 'optional'` signature.
+
+[`cypress-mcp`](https://github.com/yashpreetbathla/cypress-mcp) was the primary tool for running tests and inspecting results — every spec in this repo was first exercised via `cypress_run_spec`, then iterated with `cypress_get_failure_context` and `cypress_get_screenshot` until green.
 
 The architectural decisions (URL-mirrored selectors, SRP per page, one spec per scenario, dual-command pattern for `assertProductInCart`, dual spec coverage for `01-html-forms`, etc.) were discussed with the user before being committed. Per AGENTS.md, no `.md` files live at the project root except this `README.md` and `AGENTS.md`; all working notes live in `.opencode/`.
